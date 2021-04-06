@@ -86,3 +86,4 @@ else if (numOfFlat % 27 !== 0){
 
 
 alert('Абонент живет в подъезде ' + entrance + ' на этаже ' + floor)
+//fin
