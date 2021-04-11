@@ -16,6 +16,32 @@ for (let key in citiesAndCountries){
 }
 console.log(array)
 
+// task2
+let array = []
+function getArray(){
+    const amount = 9;
+    let el = 1;
+    for(let i=1; i <= amount / 3; i++){
+        
+        let b = []
+        for(let y = 1; y < 4; y++){
+            
+            b.push(el)
+            el = el+1;
+           
+        }
+        array.push(b)
+        
+        console.log(b)
+        }
+        
+    }
+    console.log(array)
+
+
+getArray()
+console.log(array)
+
 // task3
 const namesOfDays = {
     ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг' ,'Пятница', 'Суббота', 'Воскресенье'],
