@@ -1,62 +1,6 @@
 
-// const arr = ['a', 'b', 'c', 'd', 'e'];
+// hw4 main task
 
-// function first(arr, n = 1) {
-//     let arr1 = []
-//     for(i = 0; i < n; i++){
-//        arr1.push(arr[i])
-     
-//     }
-//     //   console.log(arr.length)
-//     return arr1;
-//   }
-
-//  console.log(first(arr, 2))
-
-
-
-// фейк бинар задача 1
-// function fakeBin(x){
-//     let arr = []
-//     for(let i = 0; i < x.length; i++){
-//       if(x[i] < 5){
-//         arr.push(0)
-//       }
-//       else{
-//         arr.push(1)
-//       }
-  
-//     }
-//   return arr.join('')
-//   }
-//   console.log(fakeBin('15389841354987978430'))
-//  ______________________________________________________________________________________________________________
-
-// function gooseFilter (birds) {
-//     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-//     let res = []
-//     for(let i = 0; i < birds.length; i++){
-//         let isGeese = false
-        
-//         for(let y = 0; y < geese.length; y++){           
-            
-           
-       
-//         if(birds[i] == geese[y]){
-//           isGeese = true
-//             }
-//          }
-//          if (isGeese == false){
-//             res.push(birds[i])
-//          }
-          
-   
-//     }
-    
-//     console.log(res)
-// //     // return an array containing all of the strings in the input array except those that match strings in geese
-// }
-//   gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
 
 
 const studentArr = [{
