@@ -95,7 +95,7 @@ const studentArr = [{
 class Students {
   
     constructor(enrollee){
-        this.id = newId++, //можно сделать new Date(), но получается очень длинный айди. Знаем, можем, не стали.
+        this.id = newId++,      //можно сделать new Date(), но получается очень длинный айди. Знаем, можем, не стали.
         this.name = enrollee.name,
         this.surname = enrollee.surname,
         this.ratingPoint = enrollee.ratingPoint,
@@ -132,22 +132,27 @@ enrolleeAll.sort((a, b) => {
 enrolleeAll.sort()
 
 let kontract = [];
-let budzet = [];
+let budzetOportunityChance = [];
 
-budzet = [...enrolleeAll]
+budzetOportunityChance = [...enrolleeAll]
 
-let ost = budzet.splice(5)
+let ost = budzetOportunityChance.splice(5)
 
 let losers = ost.concat(kontract);
-for(let y of budzet){
+for(let y of budzetOportunityChance){
     y.isSelfPayment = false
+    if(y.ratingPoint < 800){                    // если рейтинг наибольший, но меньше 800, платит за себя сам
+        y.isSelfPayment = true
+    }
+    
 }
 for(let y of losers){
     y.isSelfPayment = true
 }
 
-let newStudents = budzet.concat(losers)
-// console.log(budzet)
+let newStudents = budzetOportunityChance.concat(losers)
+
+// console.log(budzetOportunityChance)
 // console.log(losers)
 
 console.log(newStudents)
