@@ -10,8 +10,6 @@ const counter = function counter(x){
 }
 
 let ax = counter(0)
-
-
 // проверка
 ax(2)
 ax(3)
@@ -21,7 +19,6 @@ ax(5)
 ax(5)
 ax(1)
 ax(1000)
-
 // __________________________________________________________________________________
 // task2 
 
@@ -60,4 +57,27 @@ ux()
 ux(0)
 ux(1000)
 ux('rtert')
-logInfo(111111)
+// __________________________________________________________________________________
+// task 4 **
+let time;
+let getTime = function(time){
+    const counter = setInterval(function(){
+        let mm = Math.floor(time / 60)
+        let ss = time % 60
+        if(time > 0){
+            --time
+            ss = ss < 10 ? `0${ss}`: ss,
+            mm = mm < 10 ? `0${mm}` : mm,
+            console.log(`${mm}:${ss}`)
+        }
+                
+         else {
+            console.log('00:00 - time out')
+            clearInterval(counter)   
+        }     
+    
+    }, 1000)
+}
+
+
+getTime(3)
