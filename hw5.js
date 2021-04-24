@@ -5,7 +5,7 @@ const counter = function counter(x){
     // console.log(sum)
     return function(y){
     sum = (y + sum)
-   console.log(sum)
+   console.log('+', y, ' = ', sum)
 }
 }
 
