@@ -258,6 +258,10 @@ getUsersByYear(2016)
 
 function getCondidatesByUnreadMsg(x){
     let countMissedMail = []
+    if(typeof x !== 'number'){      //чтобы выдавало ответ только если введено число, оначе - консольложит ошибку
+         console.log('you have to point a number')
+         return null 
+    }
     for(let i = 0; i < listOfAllCond.length; i++){
         if(listOfAllCond[i].greeting == undefined){
             continue
@@ -270,15 +274,19 @@ function getCondidatesByUnreadMsg(x){
         
     }
     console.log(countMissedMail)
+    if (countMissedMail.length == 0){
+        console.log(`there is no any person with ${x} message`)
+    }
 }
 // проверка
-getCondidatesByUnreadMsg(9)
+getCondidatesByUnreadMsg(2)
+getCondidatesByUnreadMsg('dhh') //вывод варианта с ошибкой
 
 // task 9
 
 function getCondidatesByGender(gender){
     let genderSort = []
-   
+    
     for(let i = 0; i < listOfAllCond.length; i++){
         
         
@@ -291,9 +299,11 @@ function getCondidatesByGender(gender){
         
     }
     console.log(genderSort)
-    
+    if (genderSort.length == 0){
+        console.log(`You pointed ${gender}, it is incorrect. Correct type is male or female only`) //если геднер указан не верно, консоль лог укажет на это
+    }
 }
 // проверка
-getCondidatesByGender('male')
-
+getCondidatesByGender('female')
+getCondidatesByGender('femaleyyy') //вывод варианта с ошибкой
 
